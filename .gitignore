@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Rider / JetBrains
+.idea/
+
+# APK files (never commit game files)
+*.apk
+*.obb
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
