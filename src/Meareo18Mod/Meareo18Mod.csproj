@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AssemblyName>Meareo18AmongUsMod</AssemblyName>
+    <RootNamespace>Meareo18AmongUsMod</RootNamespace>
+    <Version>0.1.0</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <!-- Referencias condicionales: solo se compilan si la carpeta libs/ existe -->
+  <ItemGroup>
+    <Reference Include="BepInEx.Core" Condition="Exists('..\..\libs\BepInEx.Core.dll')">
+      <HintPath>..\..\libs\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP" Condition="Exists('..\..\libs\BepInEx.Unity.IL2CPP.dll')">
+      <HintPath>..\..\libs\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony" Condition="Exists('..\..\libs\0Harmony.dll')">
+      <HintPath>..\..\libs\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp" Condition="Exists('..\..\libs\Assembly-CSharp.dll')">
+      <HintPath>..\..\libs\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
